@@ -1,0 +1,65 @@
+﻿@model GMS.UI.ViewModels.DashboardViewModel
+
+@{
+    ViewBag.Title = "Dashboard";
+    ViewBag.Description = "Home Page";
+}
+
+<div class="row">
+    <div class="col-xs-12 col-md-5">
+        <div class="col-lg-6 col-xs-6">
+            <div class="small-box bg-blue">
+                <div class="inner">
+                    <h3>@Model.FriendsCount</h3>
+
+                    <p>Amigo(s)</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="@Url.Action("Index", "Friends")" class="small-box-footer">Mais informações <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xs-6">
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3>@Model.GamesCount</h3>
+
+                    <p>Jogo(s)</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="@Url.Action("Index", "Games")" class="small-box-footer">Mais informações <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5">
+        <div class="col-lg-6 col-xs-6">
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3>@Model.PendingLoans</h3>
+
+                    <p>Empréstimo(s) Pendente(s)</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="@Url.Action("Index", "Loans")" class="small-box-footer">Mais informações <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-xs-6">
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3>@Model.FinishedLoans</h3>
+
+                    <p>Empréstimo(s) Concluído(s)</p>
+                </div>
+                <div class="icon">
+                    <i class="ion ion-bag"></i>
+                </div>
+                <a href="@Url.Action("Index", "Loans")" class="small-box-footer">Mais informações <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿@model GMS.UI.ViewModels.FriendViewModel
+
+@{
+    ViewBag.Title = "Detalhes do Amigo";
+}
+
+<section class="content-header">
+    <h1>
+        &nbsp;
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")"><i class="fa fa-th"></i> Dashboard</a></li>
+        <li><a href="@Url.Action("Index","Friends")">Amigos</a></li>
+        <li>Detalhes do Amigo</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-body">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Fullname)</th>
+                                <td>@Html.DisplayFor(model => model.Fullname)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                                <td>@Html.DisplayFor(model => model.Email)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.ZipCode)</th>
+                                <td>@Html.DisplayFor(model => model.ZipCode)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Address)</th>
+                                <td>@Html.DisplayFor(model => model.Address)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Number)</th>
+                                <td>@Html.DisplayFor(model => model.Number)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.AddressComplement)</th>
+                                <td>@Html.DisplayFor(model => model.AddressComplement)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Neighborhood)</th>
+                                <td>@Html.DisplayFor(model => model.Neighborhood)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.City)</th>
+                                <td>@Html.DisplayFor(model => model.City)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.State)</th>
+                                <td>@Html.DisplayFor(model => model.State)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Cellphone)</th>
+                                <td>@Html.DisplayFor(model => model.Cellphone)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.SocialNetwork)</th>
+                                <td>@Html.DisplayFor(model => model.SocialNetwork)</td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-footer">
+        <a href="@Url.Action("Index","Friends")" class="btn btn-info">Voltar</a>
+        <a href="@Url.Action("Edit", "Friends",  new {Id = Model.Id})" class="btn btn-success">Editar</a>
+    </div>
+
+</section>

@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Edição de Empréstimo";
+}
+
+<section class="content-header">
+    <h1>
+        &nbsp;
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")"><i class="fa fa-th"></i> Dashboard</a></li>
+        <li><a href="@Url.Action("Index","Loans")">Empréstimos</a></li>
+        <li>Edição de Empréstimos</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                </div>
+
+                @using (Html.BeginForm("Edit", "Loans", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        @Html.Partial("_FormCreateEdit")
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Salvar" class="btn btn-success" />
+                                <a href="@Url.Action("Index","Loans")" class="btn btn-warning">Voltar</a>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

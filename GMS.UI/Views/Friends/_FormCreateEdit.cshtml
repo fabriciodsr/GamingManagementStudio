@@ -1,0 +1,89 @@
+﻿@model GMS.UI.ViewModels.FriendViewModel
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Fullname, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-6">
+        @Html.EditorFor(model => model.Fullname, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Fullname, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-4">
+        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.ZipCode, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-1">
+        @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-6">
+        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Number, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-1">
+        @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.AddressComplement, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-2">
+        @Html.EditorFor(model => model.AddressComplement, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.AddressComplement, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Neighborhood, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-3">
+        @Html.EditorFor(model => model.Neighborhood, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Neighborhood, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-3">
+        @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-3">
+        @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Cellphone, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-2">
+        @Html.EditorFor(model => model.Cellphone, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Cellphone, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.SocialNetwork, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-3">
+        @Html.EditorFor(model => model.SocialNetwork, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.SocialNetwork, "", new { @class = "text-danger" })
+    </div>
+</div>

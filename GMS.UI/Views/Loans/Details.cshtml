@@ -1,0 +1,55 @@
+﻿@model GMS.UI.ViewModels.LoanViewModel
+
+@{
+    ViewBag.Title = "Detalhes do Empréstimo";
+}
+
+<section class="content-header">
+    <h1>
+        &nbsp;
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index","Home")"><i class="fa fa-th"></i> Dashboard</a></li>
+        <li><a href="@Url.Action("Index","Loans")">Empréstimos</a></li>
+        <li>Detalhes do Empréstimo</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-body">
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                                <td>@Html.DisplayFor(model => model.Name)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Genre)</th>
+                                <td>@Html.DisplayFor(model => model.Genre)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Platform)</th>
+                                <td>@Html.DisplayFor(model => model.Platform)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Image)</th>
+                                <td>@Html.DisplayFor(model => model.Image)</td>
+                            </tr>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.Developer)</th>
+                                <td>@Html.DisplayFor(model => model.Developer)</td>
+                            </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-footer">
+        <a href="@Url.Action("Index","Games")" class="btn btn-info">Voltar</a>
+        <a href="@Url.Action("Edit", "Games",  new {Id = Model.Id})" class="btn btn-success">Editar</a>
+    </div>
+
+</section>

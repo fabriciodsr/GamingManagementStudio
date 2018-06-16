@@ -1,0 +1,53 @@
+﻿@model GMS.UI.ViewModels.GameViewModel
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-4">
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Genre, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-2">
+        @Html.EnumDropDownListFor(model => model.Genre, htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Genre, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Platform, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-2">
+        @Html.EnumDropDownListFor(model => model.Platform, htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Platform, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-4">
+        <input type="file" name="File" title="File" id="File" class="form-control" />
+        @Html.ValidationMessageFor(model => model.File, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Developer, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-4">
+        @Html.EditorFor(model => model.Developer, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Developer, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+@if (Model.Image != null)
+{
+    <div class="form-group">
+        <label class="control-label col-md-2">Arquivo atual:</label>
+        <div class="col-md-5">
+            <a target="_blank" href="@Url.Content($"{"http"}://{@HttpContext.Current.Request.Url.Authority}/Content/Images/Games/{Model.Image}")">@Model.Image</a>
+        </div>
+
+    </div>
+}
